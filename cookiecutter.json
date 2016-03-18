@@ -18,5 +18,5 @@
     "email_host_user": "email_host_user",
     "email_host_password": "email_host_password",
     "email_sender": "email_sender",
-    "email_recievers": "email_recievers",
+    "email_recievers": "email_recievers"
 }
