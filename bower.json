@@ -1,6 +1,6 @@
 {
-  "name": "{{ project_name }}",
-  "homepage": "{{ project_name }}.vingtcinq.io",
+  "name": "{{ cookiecutter.project_name }}",
+  "homepage": "{{ cookiecutter.project_name }}.vingtcinq.io",
   "authors": [
     "contact@vingtcinq.io"
   ],

@@ -1,10 +1,10 @@
 import datetime
 
-S3_ENDPOINT = 'https://{{project_name}}.s3.amazonaws.com/'
+S3_ENDPOINT = 'https://{{ cookiecutter.project_name }}.s3.amazonaws.com/'
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
-AWS_ACCESS_KEY_ID = 'AWS_ACCESS_KEY_ID'
-AWS_SECRET_ACCESS_KEY = 'AWS_SECRET_ACCESS_KEY'
-AWS_STORAGE_BUCKET_NAME = '{{project_name}}'
+AWS_ACCESS_KEY_ID = '{{ cookiecutter.aws_access_key_id }}'
+AWS_SECRET_ACCESS_KEY = '{{ cookiecutter.aws_secret_key_id }}'
+AWS_STORAGE_BUCKET_NAME = '{{ cookiecutter.project_name }}'
 
 
 # http://django-storages.readthedocs.org/en/latest/backends/amazon-S3.html#settings

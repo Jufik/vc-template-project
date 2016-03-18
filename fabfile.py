@@ -6,7 +6,7 @@ env.user = 'ec2-user'
 env.hosts = ['vingtcinq.io']
 
 
-project_name = '{{ project_name }}'
+project_name = '{{ cookiecutter.project_name }}'
 
 
 def collect():

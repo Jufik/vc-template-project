@@ -7,22 +7,22 @@ var livereload = require('gulp-livereload');
 gulp.task('sass', function() {
 
   return gulp
-    .src('assets/{{ project_name }}/scss/*.scss')
+    .src('assets/{{ cookiecutter.project_name }}/scss/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sass({ 
         // outputStyle: 'compressed'
     }).on('error', sass.logError))
     .pipe(sourcemaps.write("./"))
-    .pipe(gulp.dest('assets/{{ project_name }}/css'))
+    .pipe(gulp.dest('assets/{{ cookiecutter.project_name }}/css'))
     .pipe(notify("style.css generated"))
     .pipe(livereload());
 });
 
 gulp.task('default',function() {
-    return gulp.watch('assets/{{ project_name }}/scss/**/*.scss',['sass']);
+    return gulp.watch('assets/{{ cookiecutter.project_name }}/scss/**/*.scss',['sass']);
 });
 
 gulp.task('watch', function() {
     livereload.listen();
-    gulp.watch('assets/{{ project_name }}/scss/**/*.scss', ['sass']);
+    gulp.watch('assets/{{ cookiecutter.project_name }}/scss/**/*.scss', ['sass']);
 });
