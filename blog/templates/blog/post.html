@@ -1,0 +1,83 @@
+{% extends 'front/_layout.html' %}
+{% load static blog_ui %}
+
+{% block head %}
+    <title> {{title}} </title>
+    <meta name="description" content="Page description. No longer than 155 characters." />
+
+    <!-- Schema.org markup for Google+ -->
+    <meta itemprop="name" content="The Name or Title Here">
+    <meta itemprop="description" content="This is the page description">
+    <meta itemprop="image" content="http://www.example.com/image.jpg">
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@publisher_handle">
+    <meta name="twitter:title" content="Page Title">
+    <meta name="twitter:description" content="Page description less than 200 characters">
+    <meta name="twitter:creator" content="@author_handle">
+    <!-- Twitter summary card with large image must be at least 280x150px -->
+    <meta name="twitter:image:src" content="http://www.example.com/image.html">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Title Here" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://www.example.com/" />
+    <meta property="og:image" content="http://example.com/image.jpg" />
+    <meta property="og:description" content="Description Here" />
+    <meta property="og:site_name" content="Site Name, i.e. Moz" />
+    <meta property="article:published_time" content="2013-09-17T05:59:00+01:00" />
+    <meta property="article:modified_time" content="2013-09-16T19:08:47+01:00" />
+    <meta property="article:section" content="Article Section" />
+    <meta property="article:tag" content="Article Tag" />
+    <meta property="fb:admins" content="Facebook numberic ID" />
+{% endblock head %}  
+
+
+{% block main %}
+<section class="bg-gray-lighter">
+    <div class="container pvl position-relative">
+        <a class="previous-article" href=""><i class="icon-blog-arrow-left"></i></a>
+        <a class="next-article" href=""><i class="icon-blog-arrow-right"></i></a>
+        <p class="text-center text-electric text-space-lg small mbx">01.02.15</p>
+        <div class="row">
+            <div class="col-sm-offset-2 col-sm-8 pan">
+                <div class="bg-image image-block" style="background-image: url({% static 'clubvin/img/bg-image-home.png' %});"></div>           
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-offset-2 col-sm-8 article-content pas">
+                <div class="bg-white pam">
+                    <h1 class="mtn header-lg">{{ post.title|upper }}</h1>
+                    <p class="text-electric">{{ post.subtitle }}</p>
+                    <hr class="mvs">
+                    {{ post.content|safe }}
+                </div>              
+            </div>
+            <div class="col-sm-offset-2 col-sm-8 mtx">
+                <div class="bg-white phs pbs ptx">
+                    <h3 class="mtn small sans-serif text-center text-uppercase text-space">bientôt dans vos caves</h3>
+                    <hr class="man">
+                    <div class="row mtx">
+                        {% for a in 'abc' %}
+                        <div class="col-sm-4 text-center">
+                            {% include 'front/elements/_bottle.html' %}
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>              
+            </div>
+            <div class="col-sm-offset-2 col-sm-8 mtx">
+                <div class="row">
+                    <div class="diary-block">
+                        {% for related in related_posts %}
+                            {% render_post related %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    
+{% endblock main %}

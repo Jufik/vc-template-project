@@ -1,0 +1,57 @@
+{% extends 'front/_layout.html' %}
+
+{% load staticfiles blog_ui %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block meta %}
+    <meta name="description" content="" />
+    <meta name="keywords" content="" /> 
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:description" content="" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:url" content="" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:image" content="" />
+{% endblock %}
+{% block body %}news{% endblock body %}
+
+{% block main %}
+<section class="blk-title">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <ol class="breadcrumb">
+                    <li><a href="{% url 'front:home' %}">Accueil</a></li>
+                    <li class="active">Actualités</li>
+                </ol>       
+            </div>
+            <div class="col-sm-4">
+                <h1 class="text-center text-gray text-uppercase">les actus d'ipi</h1>
+            </div>
+            <div class="col-sm-4">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-gray btn-radius dropdown-toggle ff1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Toutes les catégories <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        {% for category in categories  %}
+                            <li><a href="{% url 'blog:category' category.slug %}">{{ category.name }}</a></li>    
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="bg-gray pvm">
+    <div class="container">
+        {% for post in posts %}
+            {% render_post post %}
+        {% endfor %}
+    </div>
+</section>
+{% endblock main %}

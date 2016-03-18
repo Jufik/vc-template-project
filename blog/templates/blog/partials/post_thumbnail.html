@@ -1,0 +1,16 @@
+{% load static imagekit %}
+
+<div class="col-sm-4 text-center">
+    <a href="{% url 'blog:article' post.slug %}">
+        <div class="position-relative hidden-corners-bottom gray-lighter">
+            {% thumbnail '1000x1000' post.cover.image as picture %}
+            <div class="position-relative bg-image hidden-corners-top gray-lighter" style="background-image: url({{ picture.url }});">
+                <div class="filter filter-electric-dark"></div>         
+                <div class="pam position-relative">
+                    <span class="serif text-assertive"><h3>{{ post.published_at|date:"d.m" }}</h3></span><br/>
+                    <span class="text-white small text-space text-uppercase">{{ post.title|title }}</span>
+                </div>
+            </div>
+        </div>
+    </a>
+</div>
