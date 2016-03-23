@@ -20,7 +20,7 @@ class Category(models.Model):
     Define a category for a Blog post
 
     Available template tag: 
-    {% category_badge category %} will return "badge stuff"
+    category_badge category  will return "badge stuff"
 
 
     ##TODO: 
