@@ -51,20 +51,14 @@ INSTALLED_APPS = [
     'storages',
     'debug_toolbar',
     
-    {% if cookiecutter.api %}
-    'rest_framework',
-    {% endif %}
+    {% if cookiecutter.api %}'rest_framework',{% endif %}
 
     # VingtCinq packages
     'utils',
     'images'
-    {% if cookiecutter.blog %}
-    'blog',
-    {% endif %}
-
-    {% if cookiecutter.api %}
-    'api',
-    {% endif %}
+    {% if cookiecutter.blog %}'blog',{% endif %}
+    {% if cookiecutter.faq %}'faq',{% endif %}
+    {% if cookiecutter.api %}'api',{% endif %}
 
 
     # Project related packages

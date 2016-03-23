@@ -1,0 +1,78 @@
+{% raw %}
+{% extends 'front/_layout.html' %}
+{% load crispy_forms_tags %}
+{% block head %}
+	<title>PRE-IPO - {{title}}</title>
+	<meta name="description" content="Page description. No longer than 155 characters." />
+
+	<!-- Schema.org markup for Google+ -->
+	<meta itemprop="name" content="The Name or Title Here">
+	<meta itemprop="description" content="This is the page description">
+	<meta itemprop="image" content="http://www.example.com/image.jpg">
+
+	<!-- Twitter Card data -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@publisher_handle">
+	<meta name="twitter:title" content="Page Title">
+	<meta name="twitter:description" content="Page description less than 200 characters">
+	<meta name="twitter:creator" content="@author_handle">
+	<!-- Twitter summary card with large image must be at least 280x150px -->
+	<meta name="twitter:image:src" content="http://www.example.com/image.html">
+
+	<!-- Open Graph data -->
+	<meta property="og:title" content="Title Here" />
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content="http://www.example.com/" />
+	<meta property="og:image" content="http://example.com/image.jpg" />
+	<meta property="og:description" content="Description Here" />
+	<meta property="og:site_name" content="Site Name, i.e. Moz" />
+	<meta property="article:published_time" content="2013-09-17T05:59:00+01:00" />
+	<meta property="article:modified_time" content="2013-09-16T19:08:47+01:00" />
+	<meta property="article:section" content="Article Section" />
+	<meta property="article:tag" content="Article Tag" />
+	<meta property="fb:admins" content="Facebook numberic ID" />
+{% endblock head %}
+
+
+{% block pagetitle %}faq{% endblock pagetitle %}
+
+{% block main %}
+<div class="pvm faq-content">
+	
+	<div class="pvm bg-black text-center">
+		<i class="icon-logo logo"></i>
+		<div class="container text-center">
+			<h1 class="text-white"> Les questions fréquemment posées par les utilisateurs...</h1>
+		</div>
+	</div>
+	<div class="pts container">
+		{% for category in faq_categories %}
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">
+					<h2 class="titles"> {{ category.get_name|safe }} </h2>
+					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+						{% for a in category.faqs.all %}
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="faqheading{{ a.id }}">
+								<h4 class="panel-title">
+									<a role="button" {% if not forloop.first %}class="collapsed"{% endif %} data-toggle="collapse" data-parent="#accordion" href="#faqcollapse{{ a.id }}" aria-expanded="{% if forloop.first %}true{% else %}false{% endif%}" aria-controls="collapse{{ a.id }}">
+										{{ a.get_question }}
+									</a>
+								</h4>
+							</div>
+							<div id="faqcollapse{{ a.id }}" class="panel-collapse collapse{% if forloop.first %} in{% endif %}" role="tabpanel" aria-labelledby="faqheading{{ a.id }}">
+								<div class="panel-body">
+										{{ a.get_answer|safe }}
+								</div>
+							</div>
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>	
+		{% endfor %}
+	</div>
+</div>
+
+{% endblock main %}
+{% endraw %}

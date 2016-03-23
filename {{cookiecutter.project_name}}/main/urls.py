@@ -33,9 +33,8 @@ urlpatterns = [
 
 urlpatterns += i18n_patterns(
     url(r'^', include('front.urls', namespace='front')),
-    {% if cookiecutter.blog %}
-    url(r'^{{ cookiecutter.blog_url }}', include('blog.urls', namespace='blog')),
-    {% endif %}
+    {% if cookiecutter.blog %} url(r'^{{ cookiecutter.blog_url }}', include('blog.urls', namespace='blog')),{% endif %}
+    {% if cookiecutter.faq %} url(r'^{{ cookiecutter.faq_url }}', include('faq.urls', namespace='faq')),{% endif %}
 
 )
 
