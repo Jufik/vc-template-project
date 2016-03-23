@@ -64,12 +64,12 @@ class MailTemplate(models.Model):
             'site_url': settings.SITE_URL
         })
         self.html = """
-        {%% raw %%}
+        {% raw %}
         {%% extends 'mails/_layout.html' %%}
         {%% block body %%}
         %s
         {%% endblock body %%}
-        {%% endraw %%}
+        {% endraw %}
         """ % self.html
 
         response = {
