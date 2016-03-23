@@ -1,0 +1,54 @@
+/* Text Indent */
+.ls-xs { letter-spacing: 2px; }
+.ls-sm { letter-spacing: 4px; }
+.ls-md { letter-spacing: 6px; }
+
+/* Text transformations */
+.tt-none { text-transform: none; }
+.tt-upercase { text-transform: uppercase; }
+.tt-italic { font-style: italic; }
+
+/* Line-heights */
+.lh-xl { line-height: 2; }
+.lh-lg { line-height: 1.8; }
+.lh-md { line-height: 1.6; }
+.lh-xs { line-height: 1.4; }
+.lh-sm { line-height: 1.2; }
+
+/* Fonts */
+.sans-serif { font-family: $sans-serif; }
+.serif { font-family: $serif; }
+
+/* Text Colors */
+.c-positive { color: $positive; }
+.c-positive-light { color: $positive-light; }
+.c-assertive { color: $assertive; }
+.c-assertive-light {	color: $assertive-light; }
+.c-electric { color: $electric; }
+.c-electric-dark { color: $electric-dark; }
+.c-white { color: $white; }
+.c-gray { color: $gray; }
+.c-gray-light { color: $gray-light; }
+.c-gray-lighter { color: $gray-lighter; }
+.c-black { color: $black; }
+
+/* Text Weights */
+.fw-ultra { font-weight: 100; }
+.fw-extra { font-weight: 200; }
+.fw-light { font-weight: 300; }
+.fw-regular { font-weight: 400; }
+.fw-bold { font-weight: 600; }
+
+/* Font Sizes */
+.fs-xs { font-size: 8px; }
+.fs-sm { font-size: $font-size-small; }
+.fs-md { font-size: $font-size-base; }
+.fs-lg { font-size: $font-size-large; }
+.fs-xl { font-size: $font-size-xlarge; }
+
+/* Header Font Sizes */
+.hfs-xl { font-size: $font-size-h1; }
+.hfs-lg { font-size: $font-size-h2; }
+.hfs-md { font-size: $font-size-h3; }
+.hfs-sm { font-size: $font-size-h4; }
+.hfs-xs { font-size: $font-size-h5; }

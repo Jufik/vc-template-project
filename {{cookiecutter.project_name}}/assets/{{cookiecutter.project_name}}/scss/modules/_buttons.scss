@@ -1,0 +1,19 @@
+.btn {
+	@include transition(0.3s ease)
+}
+
+.btn-link {
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.btn-positive {	@include button-variant($assertive, $positive, $positive); }
+.btn-facebook {	@include button-variant($white, $facebook-blue, $facebook-blue); }
+.btn-electric-light { @include button-variant($white, $electric-light, $electric-light); }
+.btn-gray-light { @include button-variant($white, lighten($gray-light, 20), lighten($gray-light, 20)); }
+.btn-assertive { @include button-variant($white, $assertive, $assertive); }
+.btn-gray-lighter { @include button-variant($white, lighten($gray-lighter,30), lighten($gray-lighter,30)); }
+.btn-gray-lighter-outline { @include button-variant($white, $white, lighten($gray-lighter,30)); }
+
+

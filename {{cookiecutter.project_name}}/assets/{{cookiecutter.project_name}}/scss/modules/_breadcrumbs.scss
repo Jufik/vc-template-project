@@ -1,0 +1,13 @@
+.breadcrumb-order {
+	font-size: $font-size-h3;
+	font-family: $serif;
+	margin-bottom: 0;
+	margin-top: 65px;
+	li > a {
+		color: $electric;
+	}
+
+	@media (max-width: $screen-xs) {
+		font-size: $font-size-h4;
+	}
+}

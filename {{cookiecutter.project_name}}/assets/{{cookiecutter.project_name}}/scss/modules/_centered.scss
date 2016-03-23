@@ -1,0 +1,23 @@
+.centered {
+	height: 100%;
+	display: table;
+	text-align: center;
+	width: 100%;
+	z-index: 2;
+	position: relative;
+}
+
+.centered-inner {
+	display: table-cell;   
+	vertical-align: middle;
+	text-align: center;
+	h2 {
+		z-index: 2;
+		position: relative;
+		margin: 0;
+	}
+	h2, h3, p, span, a {
+		z-index: 2;
+		position: relative;
+	}
+}

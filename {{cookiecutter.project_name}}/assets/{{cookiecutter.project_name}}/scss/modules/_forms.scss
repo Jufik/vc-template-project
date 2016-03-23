@@ -1,0 +1,138 @@
+/* General form style */
+.form-control {
+    @include form-control-focus($assertive)
+    @include box-shadow(inset 0 1px 1px rgba(0,0,0,0));
+    margin-bottom: 20px;
+}
+
+/* Horizontal forms specifications */
+.form-horizontal {
+    label.checkbox-inline,
+    label.radio-inline {
+        padding-top: 0 !important;
+    } 
+}
+
+textarea {
+	resize: none;
+    min-width: 100%;
+}
+
+label {
+	font-weight: 400;
+    text-transform: uppercase;
+	color: $gray-light;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    &.radio-inline,
+    &.checkbox-inline {
+        text-transform: none;
+    }
+}
+
+select.form-control {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+    -ms-appearance: none;
+	appearance: none;
+	width: 100%;
+	background: url("../img/select-arrow.svg") no-repeat $white;
+    background-position: right 10px center;
+	background-size: 10px;
+	&:focus {
+		outline: none;
+	}
+}
+
+/* ------------- Custom Checkboxes & Radios ------------- */
+/* Special Label Style Definition */
+.radio,
+.checkbox {
+	margin-bottom: 15px;
+	label {
+        text-transform: none;
+		margin-left: 10px;
+	}
+}
+
+/* Transitions */
+input[type=radio]:after,
+input[type=checkbox]:after {
+	@include transition(0.1s ease)
+}
+
+/* Hidding Default Inputs */
+input[type=radio]:not(:checked),
+input[type=radio]:checked,
+input[type=checkbox]:not(:checked),
+input[type=checkbox]:checked {
+    position: absolute;
+  	left: -10000px;
+    display:inline-block
+}
+
+/* Positionning Pseudo Elements */
+input[type=radio]:not(:checked) + span:after,
+input[type=radio]:checked + span:after,
+input[type=radio] + span:before,
+input[type=checkbox]:checked + span:after,
+input[type=checkbox] + span:after,
+input[type=checkbox] + span:before  {
+    @include transition(0.1s ease)  
+	content: "";   
+    display: block; 	 
+    position: absolute;
+    cursor: pointer;
+}
+
+/* Unchecked Inputs Base */
+input[type=radio] + span:before,
+input[type=checkbox] + span:before {
+    width: 16px;
+    height: 16px;
+    top: 4px;
+    left: 0;
+    background-color: $white;
+    border: 1px solid lighten($gray-lighter, 10);
+}
+
+/* Unchecked Radios */
+input[type=radio]:not(:checked) + span:after { 
+    width: 0;
+    height: 0;
+    top: 11px;
+    left: 8px;
+}
+
+/* Checked Radio Input */
+input[type=radio]:checked + span:after {    
+    width: 8px;
+    height: 8px;
+    top: 8px;
+    left: 4px;
+    background-color: $assertive;
+}
+
+/* Checkbox Rownded Borders  */
+input[type=checkbox] + span:before {
+    border-radius: 3px;
+}
+
+/* Radio Rownded Borders  */
+input[type=radio] + span:before,
+input[type=radio]:checked + span:after,
+input[type=radio]:not(:checked) + span:after {
+	border-radius: 8px;
+}
+
+/* Checkbox Checked */
+input[type=checkbox]:checked + span:after {
+    height: 16px;
+    width: 16px;
+    top: 4px;
+    left: 0;
+    background: url("../img/checkbox-checkmark.svg") no-repeat;
+    background-size: 16px;
+}

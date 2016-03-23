@@ -1,0 +1,112 @@
+.editable-content {
+	padding: 15px;
+	@media (min-width: $screen-sm) {
+		padding: 30px 40px 40px 40px;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: $sans-serif;
+	}
+
+	h1,
+	h2, 
+	h3,
+	h5,
+	h6 {
+		font-weight: 500;
+	}
+
+	h1 {
+		font-size: 20px;
+	}
+
+	h2 {
+		font-size: 18px;
+		color: darken($gray, 10);
+	}
+
+	h3 {
+		font-size: 16px;		
+		color: $assertive;
+	}
+
+	h4 {
+		font-weight: 600;
+		font-size: $font-size-base;
+		color: $gray;
+	}
+
+	p {
+		font-weight: 300;
+		color: $gray-light;
+	}
+
+	strong {
+		font-weight: 500;
+		color: $gray-light;
+	}
+
+	a {
+		font-weight: 500;
+        color: $assertive;
+        &:hover {
+			color: lighten($assertive, 10);
+        }
+	}
+
+	hr {
+		margin: 35px 0;
+	}
+
+	blockquote {
+		padding: 0 0 0 40px;
+		border-width: 1px;
+	}
+
+	.testimony {
+		background-color: $assertive-soft;
+		padding: 40px;
+		margin: 40px -40px;
+
+		.media-left {
+			padding-right: 20px;
+			.media-object {
+				.user-img {
+					@include box-shadow(0 2px 2px rgba($black, 0.1))
+				}				
+			}
+		}
+
+		h4 {
+			img {
+				margin-left: 5px;
+			}
+		}
+
+		h2,
+		h3,
+		h4,
+		p {
+			color: $white;
+		}
+
+		p {
+			font-style: italic;
+			&:before {
+				content: "« "
+			}
+			&:after {
+				content: " »"
+			}
+		}
+		@media (max-width: $screen-sm) {
+			margin: 40px -15px;
+			padding: 15px;
+		}
+	}
+}

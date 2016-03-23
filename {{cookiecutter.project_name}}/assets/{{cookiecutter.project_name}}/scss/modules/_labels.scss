@@ -1,0 +1,18 @@
+.label-assertive { @include label-variant($assertive); }
+
+.label-bubble {
+	font-size: $font-size-base;
+	padding: 8px 15px;
+	position: relative;
+	&:after {
+		content: "";
+		position: absolute;
+		bottom: -7px;
+		right: 10px;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 7px 0 0 7px;
+		border-color: $assertive transparent transparent transparent;
+	}
+}

@@ -1,0 +1,36 @@
+.browser {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 9999;
+	background-color: $electric;
+
+	.browser-table {
+		display: table;
+		height: 100%;
+		width: 100%;	
+	}
+
+	.browser-table-cell {
+		text-align: center;
+		display: table-cell;
+		vertical-align: middle;	
+		color: $white;
+		font-size: 18px;
+		font-weight: 300;
+		line-height: 1.6;
+		img {
+			width: 200px;
+			margin-bottom: 20px;
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
+		}
+		a {
+			color: $assertive;
+			text-decoration: none;
+		}	
+	}
+}

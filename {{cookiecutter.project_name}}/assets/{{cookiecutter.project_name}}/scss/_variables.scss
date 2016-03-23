@@ -1,0 +1,156 @@
+// Colors
+$gray-base:              					#000;
+$gray-darker:            					lighten($gray-base, 13.5%); // #222
+$gray-dark:              					lighten($gray-base, 20%);   // #333
+$gray:                   					#666666; // EDITED
+$gray-light:             					#808080; // EDITED
+$gray-lighter:           					#999999; // #eee
+
+$link-color: 								$gray;
+
+$brand-primary:         					darken(#428bca, 6.5%); // #337ab7
+$brand-success:         					#5cb85c;
+$brand-info:            					#5bc0de;
+$brand-warning:         					#f0ad4e;       
+$brand-danger:         						#d9534f;
+
+// New Set of Colors
+$assertive:									#f7931e;  
+$assertive-soft:							#FC9A49;    
+$assertive-light:							lighten($assertive, 10);
+$assertive-dark:							darken($assertive, 10);
+$positive:									#8f3246;
+$positive-light:							lighten($positive, 10);
+$positive-dark:								darken($positive, 10);
+$electric-light:							#657f7f;
+$electric:									#4f6d6c;
+$electric-dark:								#1e3b3f;
+$white:										#fff;
+$black:										#000;
+$facebook-blue:								#3b5998;  
+
+// General Border Radius of the Project
+$project-border-radius:						7px;
+
+// Fonts
+$font-family-sans-serif:  					"sofia-pro";
+$font-family-serif:       					"sofia-pro";
+$serif:  									$font-family-serif;
+$sans-serif:  								$font-family-sans-serif;
+$font-family-base:        					$sans-serif;
+$headings-font-family:    					$sans-serif;
+
+$font-size-base:          					15px;
+$font-size-xlarge:							ceil(($font-size-base * 1.6));
+$font-size-large:         					ceil(($font-size-base * 1.25)); 
+$font-size-small:         					ceil(($font-size-base * 0.85)); 
+$line-height-base:        					1.5;
+
+$font-size-h1:            					floor(($font-size-base * 2.8)); // SET
+$font-size-h2:            					floor(($font-size-base * 2.15)); // ~30px
+$font-size-h3:            					ceil(($font-size-base * 1.7)); // ~24px
+$font-size-h4:            					ceil(($font-size-base * 1.25)); // ~18px
+$font-size-h5:            					$font-size-base;
+$font-size-h6:            					ceil(($font-size-base * 0.85)); // ~12px
+
+$border-radius-large:						0;
+
+// Jumbotron
+$jumbotron-heading-color:					$white;
+$jumbotron-heading-font-size:				35px;
+
+// Modals 
+$modal-backdrop-bg:							$gray;
+$modal-backdrop-opacity:					0.9;
+$modal-title-padding:						10px 0;
+$modal-inner-padding:						10px 0;
+$modal-md:									500px;
+
+// Buttons
+$btn-border-radius-base:					20px;
+$btn-border-radius-large:					30px;
+$btn-font-weight:                			400;
+
+// Inputs
+$input-border-radius:						3px;
+$input-border-radius-large:					30px;
+/*$input-height-base:							40px;
+*/$input-color:								$gray;
+$input-border:								lighten($gray-lighter, 20);
+$input-color-placeholder:        			$gray-lighter;
+$input-bg:									$white;
+
+// Forms 
+$form-group-margin-bottom:					0;
+
+// Carousel 
+$carousel-control-color:					$white;
+$carousel-control-opacity:					1;
+$carousel-control-font-size:				30px;
+$carousel-text-shadow:						none;
+$carousel-indicator-border-color:			$white;
+$carousel-indicator-active-bg:				$white;
+
+// Navbar
+//$navbar-height:								40px;
+$navbar-default-color:						$gray-lighter;
+$navbar-default-bg:							$white;
+$navbar-default-border:						transparent;
+$navbar-padding-vertical:					15px;
+$navbar-padding-horizontal:					20px;
+$navbar-collapse-max-height:				500px;
+
+// Navbar brand
+$navbar-default-brand-hover-bg:            	transparent;
+
+// Navbar-Toggle 
+$navbar-default-toggle-border-color:        transparent;
+$navbar-default-toggle-icon-bar-bg:			$assertive-dark;
+$navbar-default-toggle-hover-bg:			transparent;
+
+// Navbar-links
+$navbar-default-link-color:					$gray-light;
+$navbar-default-link-hover-color:			$assertive;
+$navbar-default-link-hover-bg:				transparent;
+$navbar-default-link-active-color:			$assertive;
+$navbar-default-link-active-bg:				transparent;
+
+// Dropdowns
+$dropdown-link-color:						$gray;
+$dropdown-link-hover-color:					$white;
+$dropdown-link-hover-bg:     				$assertive;
+$dropdown-link-active-color:				$white;
+$dropdown-link-active-bg:					lighten($assertive, 5);
+$dropdown-bg:								$white;
+$dropdown-border:							transparent;		
+$border-radius-base:						5px;	
+
+// Panels
+$panel-bg:									$white;
+$panel-body-padding:						20px 0 25px 0;
+$panel-heading-padding:						25px 0;
+/*$panel-border-radius:						0px;
+*/
+// Breadcrumbs
+$breadcrumb-bg: 							transparent;			
+$breadcrumb-active-color:					$electric-dark;
+$breadcrumb-color:							$electric;
+
+// Nav 
+$nav-tabs-active-link-hover-color:			$positive;
+$nav-tabs-active-link-hover-bg:				$gray-dark;
+$nav-link-hover-bg:							$gray-dark;
+
+// Paddings button 
+$padding-base-vertical:						8px;
+$padding-base-horizontal:					13px;
+$padding-large-vertical:					15px;
+
+// Hr Color
+$hr-border:									lighten($gray-lighter, 30);
+
+// Thumbnails
+$thumbnail-padding:							0;
+$thumbnail-bg:								$white;
+$thumbnail-border:							none;
+$thumbnail-border-radius:					10px;

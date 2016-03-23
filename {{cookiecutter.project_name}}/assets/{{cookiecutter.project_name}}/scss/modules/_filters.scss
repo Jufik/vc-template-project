@@ -1,0 +1,14 @@
+.filter {
+	@include transition(0.3s ease);
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	z-index: 0;
+
+	&.filter-assertive { background-color: rgba($assertive, 0.8); }
+	&.filter-positive { background-color: rgba($positive, 0.8); }
+	&.filter-electric { background-color: rgba($electric, 0.8); }
+	&.filter-electric-dark { background-color: darken(rgba($electric, 0.9), 20); }
+	&.filter-white { background-color: rgba($white, 0.3); }
+	&.filter-black { background-color: rgba($black, 0.4); } 
+}

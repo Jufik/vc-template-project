@@ -1,0 +1,3 @@
+.bra { border-radius: $project-border-radius; }
+.brb { @include border-bottom-radius($project-border-radius) }
+.brt { @include border-top-radius($project-border-radius) }

@@ -1,0 +1,40 @@
+.panel-white {
+  	@include panel-variant(transparent, $assertive, $white, $panel-default-border);
+}
+
+.panel {
+	padding: 0 30px;
+}
+
+.panel-body {
+	border-top: 1px solid lighten($gray-lighter, 30) !important;
+}
+
+.panel-heading {
+	.panel-title {
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: flex;
+		-webkit-justify-content: space-between;
+		-moz-justify-content: space-between;
+		-ms-justify-content: space-between;
+		justify-content: space-between;
+		a {
+			/* Full width link */
+			display: block;
+			width: 100%;
+			&:hover {
+				color: lighten($assertive, 10);
+			}
+		}		
+		i {
+			color: lighten($gray-lighter, 10);
+		}
+	}
+}
+
+/* Margin top after first panel */
+.panel-group .panel + .panel {
+    margin-top: 15px;
+}

@@ -1,0 +1,22 @@
+.bg-image {
+	background-position: center center;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+}
+
+.bg-white {	background-color: $white; }
+.bg-black {	background-color: $black; }
+.bg-gray { background-color: $gray; }
+.bg-gray-light { background-color: $gray-light; }
+.bg-gray-lighter { background-color: lighten($gray-lighter, 35); }
+.bg-gray-dark { background-color: lighten($gray-dark, 5); }
+.bg-electric-light { background-color: $electric-light; }
+.bg-electric { background-color: $electric; }
+.bg-electric-dark { background-color: $electric-dark; }
+.bg-assertive { background-color: $assertive; }
+.bg-assertive-soft { background-color: $assertive-soft; }
+.bg-positive { background-color: $positive; }
+.bg-gray-trans { background-color: rgba($gray-dark, 0.95); }
+

@@ -1,0 +1,141 @@
+.navbar-brand {
+	padding-top: 10px;
+	img {
+		height: 32px;
+	}
+}
+
+/* Bruger Button Animation*/
+.navbar-toggle {
+	margin-bottom: 0;
+	margin-top: 7px;
+	.icon-bar {
+		@include transition(0.3s)
+		width: 20px;
+		height: 3px;		
+	}
+	.top-bar {
+		-webkit-transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		transform: rotate(45deg);
+		-webkit-transform-origin: 0% 90%;
+		-moz-transform-origin: 0% 90%;
+		-ms-transform-origin: 0% 90%;
+		transform-origin: 0% 90%;
+		margin-bottom: 5px;
+	}
+	.middle-bar {
+		opacity: 0;
+		margin-bottom: 5px;
+	}
+	.bottom-bar {
+		-webkit-transform: rotate(-45deg);
+		-moz-transform: rotate(-45deg);
+		-ms-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+		-webkit-transform-origin: -5% -15%;
+		-moz-transform-origin: -5% -15%;
+		-ms-transform-origin: -5% -15%;
+		transform-origin: -5% -15%;
+	}
+	&.collapsed {
+		-webkit-transform: rotate(0);
+		-moz-transform: rotate(0);
+		-ms-transform: rotate(0);
+		transform: rotate(0);
+		.icon-bar {
+			height: 3px;
+			border-radius: 5px;	
+		}
+		.bottom-bar,
+		.top-bar {
+			-webkit-transform: rotate(0);
+			-moz-transform: rotate(0);
+			-ms-transform: rotate(0);
+			transform: rotate(0);
+		}
+		.middle-bar {
+			opacity: 1;
+		}
+	}
+}
+
+/* Definition of the Navbar content */
+.navbar-name-of-the-project {
+	@include box-shadow(0 3px 3px rgba($black, 0.05))
+	.navbar-collapse {
+		background-color: $white;	
+		.nav > li {
+			> a {
+				padding: 14px;
+				/* Navbar button style */
+				&.navbar-btn {
+
+				}
+				/* Navbar link style */
+				&.navbar-link {
+					
+				}	
+			}
+			&.dropdown {
+				> a {
+					padding-bottom: 10px;
+				}
+				/* Centered dropdown menu */
+				.dropdown-menu {
+					left: 50%;
+					right: auto;
+					-webkit-transform: translate(-50%, 0);
+					-moz-transform: translate(-50%, 0);
+					-ms-transform: translate(-50%, 0);
+					transform: translate(-50%, 0);
+
+					/* Large screen dropdown menu behavior */
+					@media (min-width: $screen-sm) {
+						padding: 0 20px;
+						/* Change value to vertically move dropdown-menu*/
+	/*					top: 65px;
+	*/					border-radius: 0;
+						@include box-shadow(0 3px 5px rgba($black, 0.1))
+					}
+
+					li {
+						text-align: center;
+						a {
+							padding: 15px;
+							&:hover {
+								background-color: $white;
+								color: $assertive;
+							}
+						}
+					}
+				}
+			}
+			/* Large screen link position */
+			@media (max-width: $screen-sm) {
+				margin-left: 0;
+			    text-align: center;
+			}
+		}
+
+		/* Navbar right adjustments */
+		.navbar-right {
+			
+		}
+
+		/* Navbar left adjustments */
+		.navbar-left {
+			
+		}
+	}
+}
+
+/* Hide Navbar on scroll down */
+.navbar-fixed-top {
+	@include transition(0.3s ease-in-out);
+}
+
+.nav-up {
+	top: -70px;	
+} 

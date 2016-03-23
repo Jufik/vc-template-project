@@ -1,0 +1,31 @@
+.nav-tabs-default {
+    border-bottom: 1px solid lighten($gray-lighter, 30);
+    > li {
+        text-align: left;
+        > a {
+            transition: color 0.5s;
+            border-bottom: none;
+            border: none;
+            &:hover {
+                color: $assertive;
+                background-color: transparent;
+            }
+        }
+        &:first-child {
+            a {
+                padding-left: 0;
+            } 
+        }
+        &.active > a {
+            background-color: transparent;
+            color: $assertive;
+
+            &:hover,
+            &:focus {
+                background-color: transparent;
+                color: $assertive;
+                border: none;
+            }            
+        }
+    }
+}

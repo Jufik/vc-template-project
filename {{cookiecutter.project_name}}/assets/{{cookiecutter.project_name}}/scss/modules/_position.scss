@@ -1,0 +1,14 @@
+.position-relative { position: relative; }
+.position-absolute { position: absolute; }
+
+.show-sm { @media (min-width: $screen-sm) { display: none !important; }}
+.show-xs { @media (min-width: $screen-xs) {	display: none !important; }}
+.show-md { @media (min-width: $screen-md) {	display: none !important; }}
+.hide-sm { @media (max-width: $screen-sm) {	display: none !important; }}
+.hide-xs { @media (max-width: $screen-xs) {	display: none !important; }}
+.hide-md { @media (max-width: $screen-md) {	display: none !important; }}
+.hide-custom { @media (max-width: (1050px)) { display: none !important; }}
+
+.rptl { @media (max-width: $screen-sm) { padding-top: 60px; }}
+.rptm { @media (max-width: $screen-sm) { padding-top: 30px; }}
+.rpts {	@media (max-width: $screen-sm) { padding-top: 15px; }}

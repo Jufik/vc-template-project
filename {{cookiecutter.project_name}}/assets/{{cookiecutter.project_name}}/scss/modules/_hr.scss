@@ -1,0 +1,29 @@
+hr {
+	&.hr-white { border-top-color: $white; }
+	&.hr-black { border-top-color: $black; }
+	&.hr-assertive { border-top-color: $assertive; }
+	&.hr-positive { border-top-color: $positive; }
+	&.hr-electric { border-top-color: $electric; }
+}
+
+.hrl {
+	border-width: 1px;
+	border-style: solid;
+
+	&.hr-white { border-left-color: $white; }
+	&.hr-black { border-left-color: $black; }
+	&.hr-assertive { border-left-color: $assertive; }
+	&.hr-positive { border-left-color: $positive; }
+	&.hr-electric { border-left-color: $electric; }	
+}
+
+.hrr {
+	border-width: 1px;
+	border-style: solid;
+
+	&.hr-white { border-right-color: $white; }
+	&.hr-black { border-right-color: $black; }
+	&.hr-assertive { border-right-color: $assertive; }
+	&.hr-positive { border-right-color: $positive; }
+	&.hr-electric { border-right-color: $electric; }	
+}

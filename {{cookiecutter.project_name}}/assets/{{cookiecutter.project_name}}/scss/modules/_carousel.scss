@@ -1,0 +1,49 @@
+.carousel-inner > .item > img {
+    border-radius: 10px;
+}
+
+/*.carousel-control {
+    &.left {
+        @include gradient-horizontal($start-color: rgba(0,0,0,0), $end-color: rgba(0,0,0,0));
+    }
+    &.right {
+        @include gradient-horizontal($start-color: rgba(0,0,0,0), $end-color: rgba(0,0,0,0));
+    }
+    &:hover,
+    &:focus {
+        @include opacity(1);
+    }
+    .icon-carousel-arrow-left,
+    .icon-carousel-arrow-right {
+        position: absolute;
+        top: 35%;
+        margin-top: -10px;
+        z-index: 5;
+        display: inline-block;
+    }
+    .icon-carousel-arrow-left {
+        left: 50%;
+        margin-left: -10px;
+    }
+
+    .icon-carousel-arrow-right {
+        right: 50%;
+        margin-right: -10px;
+    }
+}*/
+
+.carousel-indicators {
+    bottom: 8px;
+    li {
+        width:  11px;
+        height: 11px;
+        margin: 0 3px;
+        background-color: transparent;
+    }
+    .active {
+        margin: 0 2px;
+        width:  11px;
+        height: 11px;
+        background-color: $carousel-indicator-active-bg;
+    }
+}

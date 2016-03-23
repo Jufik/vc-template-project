@@ -1,0 +1,37 @@
+.modal-dialog {	
+	.modal-content {
+		padding-left: 15px;
+		padding-right: 15px;
+		padding-bottom: 15px;
+		border: none;
+		border-radius: 5px;
+		@include box-shadow(0 2px 5px rgba($black, 0.1));		
+		.close-button {
+			position: absolute;
+			top: 0;	
+			right: -30px;
+			color: lighten($gray-lighter, 30);
+			cursor: pointer;   
+		}
+		.modal-body {
+			padding-bottom: 0;
+		}
+		.modal-header {
+			border: none;
+		}
+		.modal-footer {
+			border: none;
+		}
+		@media (min-width: $screen-sm) {
+			margin-top: calc(15vh);
+		}
+		@media (max-width: $screen-sm) {
+			.close-button {
+				left: 50%;
+				right: 50%;
+				top: 102%;
+				font-size: 30px;
+			}
+		}
+	}
+}

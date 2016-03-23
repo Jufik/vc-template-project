@@ -1,0 +1,44 @@
+body {	
+	overflow-x: hidden;
+	
+	/* Disable links & button behavior */
+	a,
+	a:hover,
+	a:visited,
+	a:focus {
+		outline: none;
+		text-decoration: none;
+	}
+
+	button:focus,
+	.btn:focus,	
+	.btn:active:focus {
+		outline: none;
+	}
+
+	a {
+		@include transition(0.3s);
+		color: $assertive;
+		&,
+		&:hover, 
+		&:active {		
+			color: lighten($assertive, 10);
+			&.text-white { color: darken($white, 5); }
+			&.text-gray-light { color: lighten($gray-light, 10); }
+			&.text-assertive { color: lighten($assertive, 10); }
+			&.text-positive { color: lighten($positive, 10); }
+			&.text-electric { color: lighten($electric, 5); }
+			&.text-gray-lighter { color: lighten($gray-lighter, 10); }			
+		}
+	}
+
+	/* Font-sizes */
+
+	h1, h2, h3, h4, h5, h6 {
+		font-weight: 600;
+	}
+
+	p {
+		font-weight: 400;
+	}
+}
