@@ -7,6 +7,9 @@
     "api": true,
     "blog": true,
     "blog_url": "blog",
+
+    "faq": true,
+    "faq_url": "faq",
     "sentry_dsn":"sentry dsn",
 
     "db_name": "db_name",

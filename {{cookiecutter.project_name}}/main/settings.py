@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Django settings for {{ cookiecutter.project_name }} project.
 
@@ -55,7 +56,7 @@ INSTALLED_APPS = [
 
     # VingtCinq packages
     'utils',
-    'images'
+    'images',
     {% if cookiecutter.blog %}'blog',{% endif %}
     {% if cookiecutter.faq %}'faq',{% endif %}
     {% if cookiecutter.api %}'api',{% endif %}
