@@ -3,59 +3,32 @@
 @import 'bootstrap';
 
 /* Pages */
+@import 'pages/home';
 
-/* Modules */       
-@import 'modules/animations';  
-@import 'modules/bg'; 
-@import 'modules/br'; 
+/* Modules */
+@import 'modules/animations';
+@import 'modules/bg';
+@import 'modules/br';
 @import 'modules/breadcrumbs';
-@import 'modules/browsers'; 
-@import 'modules/buttons'; 
+@import 'modules/browsers';
+@import 'modules/buttons';
 @import 'modules/carousel';
-@import 'modules/centered'; 
+@import 'modules/centered';
 @import 'modules/dropdowns';
-@import 'modules/editable-content'; 
-@import 'modules/filters'; 
+@import 'modules/editable-content';
+@import 'modules/filters';
 @import 'modules/footer';
-@import 'modules/forms'; 
+@import 'modules/forms';
 @import 'modules/globals';
 @import 'modules/hr';
 @import 'modules/labels';
 @import 'modules/lateral-menu';
 @import 'modules/loader';
 @import 'modules/modals';
-@import 'modules/nav'; 
+@import 'modules/nav';
 @import 'modules/navbar';
-@import 'modules/panels'; 
+@import 'modules/panels';
 @import 'modules/pm';
 @import 'modules/position';
-@import 'modules/texts'; 
-@import 'modules/thumbnails'; 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@import 'modules/texts';
+@import 'modules/thumbnails';
