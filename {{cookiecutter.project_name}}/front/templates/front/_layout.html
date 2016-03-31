@@ -9,34 +9,33 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
         {% block head %}{% endblock head %}
-{% endraw %}
         <!-- Bootstrap -->
-        <link rel="stylesheet" href="{% static '{{ cookiecutter.project_name }}/css/style.css' %}">
+        <link rel="stylesheet" href="{% static '{% endraw %}{{ cookiecutter.project_name }}{% raw %}/css/style.css' %}">
 
         <!-- Fonts -->
 
         <!-- Fontasticons -->
 
         <!-- Favicons -->
-        <!-- <link rel="apple-touch-icon" sizes="57x57" href="{% static '{{ cookiecutter.project_name }}/img/favicons/apple-touch-icon-57x57.png' %}">
-        <link rel="apple-touch-icon" sizes="60x60" href="{% static '{{ cookiecutter.project_name }}/img/favicons/apple-touch-icon-60x60.png' %}">
-        <link rel="apple-touch-icon" sizes="72x72" href="{% static '{{ cookiecutter.project_name }}/img/favicons/apple-touch-icon-72x72.png' %}">
-        <link rel="apple-touch-icon" sizes="76x76" href="{% static '{{ cookiecutter.project_name }}/img/favicons/apple-touch-icon-76x76.png' %}">
-        <link rel="apple-touch-icon" sizes="114x114" href="{% static '{{ cookiecutter.project_name }}/img/favicons/apple-touch-icon-114x114.png' %}">
-        <link rel="apple-touch-icon" sizes="120x120" href="{% static '{{ cookiecutter.project_name }}/img/favicons/apple-touch-icon-120x120.png' %}">
-        <link rel="apple-touch-icon" sizes="144x144" href="{% static '{{ cookiecutter.project_name }}/img/favicons/apple-touch-icon-144x144.png' %}">
-        <link rel="apple-touch-icon" sizes="152x152" href="{% static '{{ cookiecutter.project_name }}/img/favicons/apple-touch-icon-152x152.png' %}">
-        <link rel="apple-touch-icon" sizes="180x180" href="{% static '{{ cookiecutter.project_name }}/img/favicons/apple-touch-icon-180x180.png' %}">
-        <link rel="icon" type="image/png" href="{% static '{{ cookiecutter.project_name }}/img/favicons/favicon-32x32.png" sizes="32x32' %}">
-        <link rel="icon" type="image/png" href="{% static '{{ cookiecutter.project_name }}/img/favicons/android-chrome-192x192.png" sizes="192x192' %}">
-        <link rel="icon" type="image/png" href="{% static '{{ cookiecutter.project_name }}/img/favicons/favicon-96x96.png" sizes="96x96' %}">
-        <link rel="icon" type="image/png" href="{% static '{{ cookiecutter.project_name }}/img/favicons/favicon-16x16.png" sizes="16x16' %}">
-        <link rel="manifest" href="{% static '{{ cookiecutter.project_name }}/img/favicons/manifest.json' %}">
-        <link rel="mask-icon" href="{% static '{{ cookiecutter.project_name }}/img/favicons/safari-pinned-tab.svg" color="#5bbad5' %}">
+        <!-- <link rel="apple-touch-icon" sizes="57x57" href="{% static '{% endraw %}{{ cookiecutter.project_name }}{% raw %}/img/favicons/apple-touch-icon-57x57.png' %}">
+        <link rel="apple-touch-icon" sizes="60x60" href="{% static '{% endraw %}{{ cookiecutter.project_name }}{% raw %}/img/favicons/apple-touch-icon-60x60.png' %}">
+        <link rel="apple-touch-icon" sizes="72x72" href="{% static '{% endraw %}{{ cookiecutter.project_name }}{% raw %}/img/favicons/apple-touch-icon-72x72.png' %}">
+        <link rel="apple-touch-icon" sizes="76x76" href="{% static '{% endraw %}{{ cookiecutter.project_name }}{% raw %}/img/favicons/apple-touch-icon-76x76.png' %}">
+        <link rel="apple-touch-icon" sizes="114x114" href="{% static '{% endraw %}{{ cookiecutter.project_name }}{% raw %}/img/favicons/apple-touch-icon-114x114.png' %}">
+        <link rel="apple-touch-icon" sizes="120x120" href="{% static '{% endraw %}{{ cookiecutter.project_name }}{% raw %}/img/favicons/apple-touch-icon-120x120.png' %}">
+        <link rel="apple-touch-icon" sizes="144x144" href="{% static '{% endraw %}{{ cookiecutter.project_name }}{% raw %}/img/favicons/apple-touch-icon-144x144.png' %}">
+        <link rel="apple-touch-icon" sizes="152x152" href="{% static '{% endraw %}{{ cookiecutter.project_name }}{% raw %}/img/favicons/apple-touch-icon-152x152.png' %}">
+        <link rel="apple-touch-icon" sizes="180x180" href="{% static '{% endraw %}{{ cookiecutter.project_name }}{% raw %}/img/favicons/apple-touch-icon-180x180.png' %}">
+        <link rel="icon" type="image/png" href="{% static '{% endraw %}{{ cookiecutter.project_name }}{% raw %}/img/favicons/favicon-32x32.png" sizes="32x32' %}">
+        <link rel="icon" type="image/png" href="{% static '{% endraw %}{{ cookiecutter.project_name }}{% raw %}/img/favicons/android-chrome-192x192.png" sizes="192x192' %}">
+        <link rel="icon" type="image/png" href="{% static '{% endraw %}{{ cookiecutter.project_name }}{% raw %}/img/favicons/favicon-96x96.png" sizes="96x96' %}">
+        <link rel="icon" type="image/png" href="{% static '{% endraw %}{{ cookiecutter.project_name }}{% raw %}/img/favicons/favicon-16x16.png" sizes="16x16' %}">
+        <link rel="manifest" href="{% static '{% endraw %}{{ cookiecutter.project_name }}{% raw %}/img/favicons/manifest.json' %}">
+        <link rel="mask-icon" href="{% static '{% endraw %}{{ cookiecutter.project_name }}{% raw %}/img/favicons/safari-pinned-tab.svg" color="#5bbad5' %}">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
         <meta name="msapplication-TileColor" content="#da532c">
-        <meta name="msapplication-TileImage" content="{% static '{{ cookiecutter.project_name }}/img/favicons/mstile-144x144.png' %}">
+        <meta name="msapplication-TileImage" content="{% static '{% endraw %}{{ cookiecutter.project_name }}{% raw %}/img/favicons/mstile-144x144.png' %}">
         <meta name="theme-color" content="#ffffff"> -->
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -52,7 +51,7 @@
         <div class="browser">
             <div class="browser-table">
                 <div class="browser-table-cell">
-                    <img src="{% static '{{ cookiecutter.project_name }}/img/logo.svg' %}" />
+                    <img src="{% static '{% endraw %}{{ cookiecutter.project_name }}{% raw %}/img/logo.svg' %}" />
                     <p>Vous utilisez un navigateur obsolète.</p>
                     <p>Mettez à jour votre navigateur pour une utilisation optimale de ce site</p>
                     <p><a href="http://browsehappy.com/" target="_blank">Mettre à jour</a></p>
@@ -102,15 +101,15 @@
         <script src="{% static 'bootstrap-sass/assets/javascripts/bootstrap.min.js' %}"></script>
         <!-- <script src="{% static 'jquery.scrollTo/jquery.scrollTo.min.js' %}"></script>
         <script src="{% static 'jquery.easing/jquery.easing.1.3.js' %}"></script> -->
-        <!-- <script src="{% static '{{ cookiecutter.project_name }}/js/easie.js' %}"></script>
-        <script src="{% static '{{ cookiecutter.project_name }}/js/navbarHide.js' %}"></script>
-        <script src="{% static '{{ cookiecutter.project_name }}/js/scrollTo.js' %}"></script>
-        <script src="{% static '{{ cookiecutter.project_name }}/js/stopScroll.js' %}"></script>
-        <script src="{% static '{{ cookiecutter.project_name }}/js/dropdownAnimation.js' %}"></script>
-        <script src="{% static '{{ cookiecutter.project_name }}/js/landingAnimations.js' %}"></script>
-        <script src="{% static '{{ cookiecutter.project_name }}/js/dataHide.js' %}"></script>
-        <script src="{% static '{{ cookiecutter.project_name }}/js/dataShow.js' %}"></script>
-        <script src="{% static '{{ cookiecutter.project_name }}/js/lateralMenu.js' %}"></script> -->
+        <!-- <script src="{% static '{% endraw %}{{ cookiecutter.project_name }}{% raw %}/js/easie.js' %}"></script>
+        <script src="{% static '{% endraw %}{{ cookiecutter.project_name }}{% raw %}/js/navbarHide.js' %}"></script>
+        <script src="{% static '{% endraw %}{{ cookiecutter.project_name }}{% raw %}/js/scrollTo.js' %}"></script>
+        <script src="{% static '{% endraw %}{{ cookiecutter.project_name }}{% raw %}/js/stopScroll.js' %}"></script>
+        <script src="{% static '{% endraw %}{{ cookiecutter.project_name }}{% raw %}/js/dropdownAnimation.js' %}"></script>
+        <script src="{% static '{% endraw %}{{ cookiecutter.project_name }}{% raw %}/js/landingAnimations.js' %}"></script>
+        <script src="{% static '{% endraw %}{{ cookiecutter.project_name }}{% raw %}/js/dataHide.js' %}"></script>
+        <script src="{% static '{% endraw %}{{ cookiecutter.project_name }}{% raw %}/js/dataShow.js' %}"></script>
+        <script src="{% static '{% endraw %}{{ cookiecutter.project_name }}{% raw %}/js/lateralMenu.js' %}"></script> -->
         <!-- <script src="{% static 'bootstrap-validator/js/validator.js' %}"></script> -->
 
 
@@ -120,7 +119,7 @@
 
         {% endblock js_maps %}
 
-        <!--<script src="{% static '{{ cookiecutter.project_name }}/js/dropdownAnimation.js' %}"></script>-->
+        <!--<script src="{% static '{% endraw %}{{ cookiecutter.project_name }}{% raw %}/js/dropdownAnimation.js' %}"></script>-->
     </body>
 </html>
 {% endraw %}
