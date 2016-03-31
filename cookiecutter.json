@@ -1,7 +1,7 @@
 {
     "project_name": "projectname",
     "project_path": "/mnt/website/{{ project_name }}",
-
+    "port": "8000",
     "aws_access_key_id": "aws_access_key_id",
     "aws_secret_key_id": "aws_secret_key_id",
     "api": true,
