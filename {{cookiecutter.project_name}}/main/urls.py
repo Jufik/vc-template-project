@@ -17,8 +17,19 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from django.conf.urls.i18n import i18n_patterns
 from django.conf import settings
+from django.contrib.sitemaps.views import sitemap
 
-urlpatterns = [
+# Sitemaps example
+# from .sitemaps import PageSiteMap, BlogSiteMap
+
+# sitemaps = {'sitemaps':
+#             {'projects': PageSiteMap,
+#             'articles':BlogSiteMap,
+#              }
+sitemaps = {'sitemap': {}}
+
+        }
+            urlpatterns = [
     url(r'^admin/', admin.site.urls),
 
     url(r'^redactor/', include('redactor.urls')),
@@ -26,7 +37,9 @@ urlpatterns = [
     url(r'^api/', include('api.urls')),
     {% endif %}
     url(r'^mails/', include('mails.urls', namespace='mails')),
-    url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT})
+    url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
+    url(r'^sitemap\.xml$', sitemap, sitemaps, name='django.contrib.sitemaps.views.sitemap'),
+
 
 ]
 
