@@ -54,8 +54,12 @@ INSTALLED_APPS = [
     # Third party package
     'storages',
     'debug_toolbar',
-    
+    'autofixture',
+    'imagekit',
+    'widget_tweaks',
+
     {% if cookiecutter.api %}'rest_framework',{% endif %}
+    'redactor',
 
     # VingtCinq packages
     'utils',
