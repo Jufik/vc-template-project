@@ -8,16 +8,18 @@ from utils.markdown_helper import markdown
 from django.utils.translation import ugettext_lazy as _
 from django.db import models
 
-from utils.models import TimeStampModel
-from utils.models import ActiveModel
-from utils.models import OrderModel
-
-
-class FaqCategory(TimeStampModel, ActiveModel, OrderModel):
+class FaqCategory(models.Model):
     """
     Define a category for Faqs
     """
     name = models.CharField(verbose_name=_(u"Nom"), max_length=200)
+    
+    is_active = models.BooleanField(verbose_name=_(u"Actif"), default=True)
+
+    created_at = models.DateTimeField(verbose_name=_(u"Création"), auto_now_add=True)
+    updated_at = models.DateTimeField(verbose_name=_(u"Mise à jour"), auto_now=True)
+
+    order = models.PositiveIntegerField(verbose_name=_(u"Ordre d'apparition"))
 
     class Meta:
         verbose_name = _(u"Categorie de Faq")
@@ -34,14 +36,21 @@ class FaqCategory(TimeStampModel, ActiveModel, OrderModel):
         return self.name
 
 
-class Faq(TimeStampModel, ActiveModel, OrderModel):
+class Faq(models.Model):
     """
     Define a question with its answer for the FAQ
     """
     question = models.CharField(verbose_name=_(u"Question"), max_length=200)
     answer = models.TextField(verbose_name=_(u"Réponse"))
     category = models.ForeignKey('faq.FaqCategory', verbose_name=_(u"Catégorie"), related_name="faqs")
-    
+
+    is_active = models.BooleanField(verbose_name=_(u"Actif"), default=True)
+
+    created_at = models.DateTimeField(verbose_name=_(u"Création"), auto_now_add=True)
+    updated_at = models.DateTimeField(verbose_name=_(u"Mise à jour"), auto_now=True)
+
+    order = models.PositiveIntegerField(verbose_name=_(u"Ordre d'apparition"))
+
     class Meta:
         verbose_name = _(u"Question")
         verbose_name_plural = _(u"Questions")

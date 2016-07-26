@@ -28,14 +28,14 @@ from django.contrib.sitemaps.views import sitemap
 #              }
 sitemaps = {'sitemap': {}}
 
-        }
-            urlpatterns = [
+
+urlpatterns = [
     url(r'^admin/', admin.site.urls),
 
     url(r'^redactor/', include('redactor.urls')),
-    {% if cookiecutter.api %}
+    {% if cookiecutter.api % }
     url(r'^api/', include('api.urls')),
-    {% endif %}
+    {% endif % }
     url(r'^mails/', include('mails.urls', namespace='mails')),
     url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
     url(r'^sitemap\.xml$', sitemap, sitemaps, name='django.contrib.sitemaps.views.sitemap'),
@@ -46,11 +46,10 @@ sitemaps = {'sitemap': {}}
 
 urlpatterns += i18n_patterns(
     url(r'^', include('front.urls', namespace='front')),
-    {% if cookiecutter.blog %} url(r'^{{ cookiecutter.blog_url }}', include('blog.urls', namespace='blog')),{% endif %}
-    {% if cookiecutter.faq %} url(r'^{{ cookiecutter.faq_url }}', include('faq.urls', namespace='faq')),{% endif %}
+    { % if cookiecutter.blog % } url(r'^{{ cookiecutter.blog_url }}', include('blog.urls', namespace='blog')), { % endif % }
+    { % if cookiecutter.faq % } url(r'^{{ cookiecutter.faq_url }}', include('faq.urls', namespace='faq')), { % endif % }
 
 )
 
 handler404 = 'front.views.error404'
 handler500 = 'front.views.error500'
-
