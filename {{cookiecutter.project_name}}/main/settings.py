@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 # Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/{{ docs_version }}/howto/deployment/checklist/
+# See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # chars = ''.join([string.ascii_letters, string.digits, string.punctuation]).replace('\'', '').replace('"', '').replace('\\', '')
@@ -108,7 +108,7 @@ WSGI_APPLICATION = 'main.wsgi.application'
 
 
 # Database
-# https://docs.djangoproject.com/en/{{ docs_version }}/ref/settings/#databases
+# https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
 DATABASES = {
     'default': {
@@ -119,7 +119,7 @@ DATABASES = {
 
 
 # Password validation
-# https://docs.djangoproject.com/en/{{ docs_version }}/ref/settings/#auth-password-validators
+# https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
